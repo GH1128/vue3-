@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2733379 */
+  src: url('iconfont.woff2?t=1637895786799') format('woff2'),
+       url('iconfont.woff?t=1637895786799') format('woff'),
+       url('iconfont.ttf?t=1637895786799') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiangshangsanjiaoxing:before {
+  content: "\e712";
+}
+
+.icon-wenbenshuru:before {
+  content: "\e600";
+}
+
+.icon-gengduo:before {
+  content: "\e604";
+}
+
+.icon-bianji:before {
+  content: "\e63c";
+  color: #3273ff;
+}
+
+.icon-xiangxiasanjiaoxing:before {
+  content: "\e70f";
+}
+
+.icon-shanchu:before {
+  content: "\e612";
+  color: #FF5555;
+}
+
+.icon-touxiang-copy:before {
+  content: "\e710";
+  color: #3273FF;
+}
+
+.icon-touxiang:before {
+  content: "\e65f";
+}
+
+.icon-shalou:before {
+  content: "\e605";
+}
+
+.icon-shenhebohui:before {
+  content: "\e62f";
+}
+
+.icon-shenhetongguo:before {
+  content: "\e630";
+}
+
+.icon-sousuo:before {
+  content: "\e646";
+}
+
+.icon-sousuo-copy:before {
+  content: "\e711";
+}
+
+.icon-xiajiantou:before {
+  content: "\e60c";
+}
+
