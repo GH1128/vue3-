@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "@/views/Home.vue";
 
-// import mangeRouter from "./mangeRouter/index";
+import mangeRouter from "./mangeRouter/index";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,41 +9,61 @@ const routes: Array<RouteRecordRaw> = [
     name: "Home",
     component: Home,
     redirect: "/company",
+    meta: {
+      title: '首1页',
+      icon: 'el-icon-house'
+    },
     children: [{
       path: "/portal",
       name: "PersonalPortal",
       component: () => import("@/views/dashboard/index.vue"),
+      meta: {
+        title: '首1页',
+        icon: 'el-icon-house'
+      },
     }, {
       path: "/company",
       name: "Company",
-      component: () => import("@/views/dashboard/index2.vue"),
-    }
-
-      // company
-    ]
+      component: () => import("@/views/dashboard/index2.vue"), meta: {
+        title: '首页',
+        icon: 'el-icon-house'
+      },
+    }]
   }, {
     path: "/login",
     name: "Login",
-    component: () => import("@/views/login/index.vue"),
-  }, {
+    component: () => import("@/views/login/index.vue"), meta: {
+      title: '首112页',
+      icon: 'el-icon-house'
+    },
+  },
+  {
     path: "/404",
     name: "404",
-    component: () => import("@/views/404.vue"),
-  }, {
+    component: () => import("@/views/404.vue"), meta: {
+      title: '首1页',
+      icon: 'el-icon-house'
+    },
+  },
+  {
     path: "/:pathMatch(.*)",
-    redirect: "/404",
+    redirect: "/404", meta: {
+      title: '首2页',
+      icon: 'el-icon-house'
+    },
   }
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  // routes: [...mangeRouter, ...routes]
   routes: routes,
 });
 
-// mangeRouter.map((item) => {
-//   router.addRoute(item);
-// });
+
+mangeRouter.map((item: any) => {
+  router.addRoute(item);
+});
+
 
 router.beforeEach((to: any, from: any, next: any) => {
   if (!to.meta.title) {

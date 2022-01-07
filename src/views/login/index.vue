@@ -288,7 +288,7 @@ export default defineComponent({
 });
 </script>
 <style lang="less" scoped>
-.box{
+.box {
     display: flex;
 }
 .login-background {

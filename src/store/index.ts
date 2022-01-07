@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 // import { allOrganization } from '@/api/mange/postSet'
-import personnelManage from './modules/personnelManage'
+// import personnelManage from './modules/personnelManage'
 import local from '@/utils/Local'
 
 // 部门重组
