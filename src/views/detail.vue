@@ -1,10 +1,13 @@
 <template>
-    <router-view></router-view>
+  <div>
+    detail <span>{{$route.params.id}}</span>
+  </div>
 </template>
 
 <script setup>
-
+  
 </script>
 
 <style scoped>
+
 </style>
