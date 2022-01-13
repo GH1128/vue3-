@@ -97,6 +97,13 @@ body {
             color: #e0e4e2; // 标题图标
           }
 
+          .el-menu-item {
+            &:hover {
+              background-color: #203448 !important; //单个的
+              color: #e0e4e2 !important;
+            }
+          }
+
           // 只有一级 或者两级
           .el-menu-item,
           .el-sub-menu__title {
@@ -111,14 +118,13 @@ body {
               }
 
               &:hover {
-                background-color: #203448 !important;
+                background-color: #203448;
                 color: #e0e4e2 !important;
               }
             }
 
             &:hover {
-              background-color: #203448 !important;
-              color: #e0e4e2 !important;
+              background-color: #203448; // 有二级的
             }
           }
 
