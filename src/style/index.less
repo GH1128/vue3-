@@ -1,0 +1,168 @@
+.disCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+
+  #app {
+    width: 100%;
+    height: 100%;
+
+    .el-container {
+      width: calc(100% - 6px);
+      height: 100%;
+      overflow: hidden;
+      background: #f4f4f5;
+
+      .el-header {
+        background: white;
+        display: flex;
+        align-items: center;
+        padding: 0 !important;
+      }
+
+      .el-main {
+        background: yellowgreen;
+        height: calc(100% - 60px);
+        margin: 20px;
+        border-radius: 5px;
+      }
+
+      .hide-aside {
+        transition: 0.2s;
+
+        .layout-menu {
+          width: 61px !important;
+        }
+      }
+
+      .show-side {
+        transition: 0.2s;
+
+        .layout-menu {
+          width: 251px !important;
+        }
+      }
+
+      .logo {
+        width: 100%;
+        height: 60px;
+        color: white;
+        background: #263445;
+        .disCenter();
+      }
+
+
+      // 导航的颜色 
+      .el-aside {
+        height: 100%;
+        overflow: hidden;
+        background-color: #181f31 !important;
+
+        // 外层盒子样式
+        .el-scrollbar {
+          height: calc(100% - 60px);
+          background: #181f31;
+        }
+
+        .layout-menu {
+          width: 100%;
+          border: none;
+
+          &.collapse {
+            margin-left: 0px;
+          }
+
+          .el-menu-item,
+          .el-sub-menu {
+            background-color: #181f31 !important; // 第一级和不能点击的展开
+            color: #e0e4e2; // 标题图标
+          }
+
+          .el-menu-item i,
+          .el-menu-item-group__title,
+          .el-sub-menu__title i {
+            color: #e0e4e2; // 标题图标
+          }
+
+          // 只有一级 或者两级
+          .el-menu-item,
+          .el-sub-menu__title {
+            color: #e0e4e2; // 标题图标
+
+            &.is-active {
+              background-color: #13c2c2 !important;
+              color: #e0e4e2 !important;
+
+              i {
+                color: white !important;
+              }
+
+              &:hover {
+                background-color: #203448 !important;
+                color: #e0e4e2 !important;
+              }
+            }
+
+            &:hover {
+              background-color: #203448 !important;
+              color: #e0e4e2 !important;
+            }
+          }
+
+          .el-sub-menu {
+            &.is-active {
+
+              >.el-sub-menu__title,
+              >.el-sub-menu__title i {
+                color: #e0e4e2 !important;
+              }
+            }
+
+            .el-menu-item {
+              background-color: #263445 !important;
+
+              &.is-active {
+                background-color: #13c2c2 !important;
+                color: #e0e4e2 !important;
+
+                &:hover {
+                  background-color: #13c2c2 !important;
+                  color: #e0e4e2 !important;
+                }
+              }
+
+              &:hover {
+                background-color: #203448 !important;
+              }
+            }
+
+            .el-sub-menu {
+              .el-sub-menu__title {
+                background-color: #263445 !important;
+
+                &:hover {
+                  background-color: #203448 !important;
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+}

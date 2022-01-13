@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
@@ -10,24 +10,20 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "noImplicitAny": false,
     "baseUrl": ".",
-    "allowJs": true,
     "types": [
       "webpack-env"
     ],
     "paths": {
       "@/*": [
         "src/*"
-      ],
-      "tslib" : ["node_modules/tslib/tslib.d.ts"]
+      ]
     },
     "lib": [
       "esnext",
       "dom",
       "dom.iterable",
-      "scripthost",
-      "ES2015.Promise",
+      "scripthost"
     ]
   },
   "include": [
@@ -36,7 +32,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-, "src/store/modules/personnelManage.js"  ],
+  ],
   "exclude": [
     "node_modules"
   ]

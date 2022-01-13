@@ -1,12 +1,25 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-// 全局样式
-import "@/styles/index.scss";
-// element3
-import element3 from "@/plugins/element3";
-// router
-import router from "@/router";
-// store
-import store from "@/store";
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import 'normalize.css/normalize.css' // 样式初始化
+import { componentsPlugin, componentIcon } from './element-plus/index'
+import 'element-plus/dist/index.css'
+import '@/style/index.less'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
-createApp(App).use(element3).use(router).use(store).mount("#app");
+NProgress.configure({
+    easing: 'ease',  // 动画方式    
+    speed: 500,  // 递增进度条的速度    
+    showSpinner: false, // 是否显示加载ico    
+    trickleSpeed: 200, // 自动递增间隔    
+    minimum: 0.3 // 初始化时的最小百分比
+})
+
+const app = createApp(App)
+
+componentsPlugin(app)
+componentIcon(app)
+
+app.use(store).use(router).mount('#app')
